@@ -4,6 +4,21 @@
 
 basic-tools is a library that contains a cluster of different useful tools
 
+- [Basic Tools](#basic-tools)
+  - [Package contents](#package-contents)
+  - [Environment](#environment)
+  - [Example](#example)
+  - [TODO](#todo)
+
+## Package contents
+
+- assertions
+- common
+- decorators
+- enums
+- exceptions
+- strings
+
 ## Environment
 
 ```bash
@@ -18,11 +33,22 @@ pip install git+https://github.com/AndreGraca98/basic-tools.git
 source ~/.profile
 ```
 
-## Usage
+## Example
 
-```bash
+```python
+from basic_tools.common import isfloat
+
+print(isfloat("2.3")) # True
+print(isfloat(2)) # True
+print(isfloat(2.3)) # True
+print(isfloat("2e3")) # True
+print(isfloat("234")) # True
+print(isfloat("2.3.4")) # False
+print(isfloat("2.asd")) # False
+print(isfloat([1, 2, 3])) # False
 ```
 
 ## TODO
 
 1. [ ] finish test cases
+1. [ ] finish function docs
