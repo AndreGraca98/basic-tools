@@ -8,8 +8,16 @@ from basic_tools.common import *
 
 
 class Test_isfloat(unittest.TestCase):
-    def test_isfloat_is_a_float(self):
+    def test_isfloat_is_a_float_str(self):
         number = "2.3"
+        assert isfloat(number), f"number={number} is not a float"
+
+    def test_isfloat_is_a_float_int(self):
+        number = 2
+        assert isfloat(number), f"number={number} is not a float"
+
+    def test_isfloat_is_a_float_float(self):
+        number = 2.3
         assert isfloat(number), f"number={number} is not a float"
 
     def test_isfloat_is_a_float_exp_number(self):
@@ -27,6 +35,10 @@ class Test_isfloat(unittest.TestCase):
     def test_isfloat_is_not_a_float_letters(self):
         number = "2.asd"
         assert not isfloat(number), f"number={number} is not a float"
+
+    def test_isfloat_is_not_a_float_wrong_type(self):
+        number = [1, 2, 3]
+        assert not isfloat(number), f"number={number} is not a float"  # type:ignore
 
 
 class Test_allEqual(unittest.TestCase):

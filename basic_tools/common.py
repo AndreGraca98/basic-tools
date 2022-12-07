@@ -16,11 +16,11 @@ __all__ = [
 ]
 
 
-def isfloat(x: str) -> bool:
+def isfloat(x: Union[float, int, str]) -> bool:
     try:
         float(x)
         return True
-    except ValueError:
+    except (ValueError, TypeError):
         return False
 
 

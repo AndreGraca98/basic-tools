@@ -1,30 +1,28 @@
-# RandomUtilities
+# Basic Tools
 
-Random utility files
+![badge](https://img.shields.io/github/package-json/v/AndreGraca98/basic-tools?filename=basic_tools%2Fversion.json&label=basic-tools&logo=python&logoColor=yellow)
+
+basic-tools is a library that contains a cluster of different useful tools
+
+## Environment
+
+```bash
+# Create env
+env_name=basic-tools
+conda create -n $env_name python=3.7 -y
+conda activate $env_name
+
+# Install package
+pip install git+https://github.com/AndreGraca98/basic-tools.git
+
+source ~/.profile
+```
 
 ## Usage
 
-Assuming user is in `RandomUtilities/`
-
 ```bash
-cd venv
-source virtual_env.sh
 ```
 
-## In this repo
+## TODO
 
-- [x]  `remote/update_vscode.sh` :: update vscode
-- [x]  `remote/connect_remote.sh` :: connect to remote
-- [x]  `fresh_install.sh` :: install important things such as anaconda, gparted, git...  
-- [x]  `personal_email.sh` :: sends an email with subject, body and an attacment using bash mailutils
-- [x]  `email_tools/email_class.py` :: send an email with subject, body and an attacment using python smtplib
-- [x]  `email_tools/runner_wrapper.py` :: wrapper to send an email notification if error occurs
-- [x]  `email_tools/encryption.py` :: encrypt and decrypt data using Fernet encryption. Create and retrieve encrypted credentials
-
-## Test email tools Usage
-
-Assuming user is in `RandomUtilities/`
-
-```bash
-python email_test_test_file.py
-```
+1. [ ] finish test cases
